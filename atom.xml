@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-12-11T07:28:07.534Z</updated>
+  <updated>2022-12-11T16:01:33.204Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo+Github搭建</title>
+    <link href="http://example.com/post/d4de41bd.html"/>
+    <id>http://example.com/post/d4de41bd.html</id>
+    <published>2022-12-11T11:19:02.000Z</published>
+    <updated>2022-12-11T16:01:33.204Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Hexo安装&quot;&gt;&lt;a href=&quot;#Hexo安装&quot; class=&quot;headerlink&quot; title=&quot;Hexo安装&quot;&gt;&lt;/a&gt;Hexo安装&lt;/h1&gt;&lt;h2 id=&quot;安装node-js&quot;&gt;&lt;a href=&quot;#安装node-js&quot; class=&quot;headerlink</summary>
+      
+    
+    
+    
+    
+    <category term="环境配置和搭建" scheme="http://example.com/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E5%92%8C%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>firstPage.md</title>
