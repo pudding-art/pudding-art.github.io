@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>摸鱼必备（一）</title>
+      <link href="/post/99866e21.html"/>
+      <url>/post/99866e21.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>简单介绍RSS(Really Simple Syndication，简易信息聚合)，是一种描述和同步网站内容的格式。可以定制个性化信息推送服务，减少海量信息下浏览负担。不同产品不同域名，没有一个集合所有文章的门户。</p></blockquote><ul><li>专业记者们往往有自己的beat，在某一任务或话题上有经年累月的知识积累才能产生出有深度和广度的报道，才能注意到不被一般媒体注意到的细节。</li><li>一般搜索公司名称+产品名+Blog就可以查到相关内容，eg:Intel Sapphire rapids CPU Blog</li><li>还要关注一些公司的newsroom,eg:intel&#x2F;newsroom, sumsung&#x2F;newsroom …</li><li>RSS阅读器：<a href="https://netnewswire.com/help/mac/6.1/en/getting-started">netnewswire</a></li><li>添加RSS，一般直接将网站的url拷贝即可，有的时候在后面加上rss, rss.html, rss.xml也行，实在没有可以自动生成，很多自动生成RSS的工具，可参考：<a href="https://zhuanlan.zhihu.com/p/55026716">如何用RSS订阅？</a></li></ul><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">NetNewsWire Shortcuts</span><br><span class="line"><span class="section">### Everywhere shortcuts</span></span><br><span class="line">Funtions                                    Shortcuts</span><br><span class="line">Scroll or go to next unread                space</span><br><span class="line">Go to next unread                        n or +</span><br><span class="line">Toggle read status                        r or u</span><br><span class="line">Mark all as read                        k</span><br><span class="line">Mark older articles as read                o</span><br><span class="line">Mark all as read, go to next unread        l</span><br><span class="line">Mark as unread, go to next unread        m</span><br><span class="line">Toggle starred status                    s </span><br><span class="line">Open in browser                            b or ⏎ or Enter</span><br><span class="line">Previous subscription                    a</span><br><span class="line">Next subscription                        z</span><br><span class="line"><span class="section">### Feed list</span></span><br><span class="line">Collapse                                , or ⌥ ←</span><br><span class="line">Expand                                    . or ⌥ →</span><br><span class="line">Collapse All (except for group items)    ; or ⌥⌘ ←</span><br><span class="line">Expad All                                &#x27; or ⌥⌘ →</span><br><span class="line">Move focus to headlines                    →</span><br><span class="line"><span class="section">### Timeline</span></span><br><span class="line">Move focus to subscriptions                ←</span><br><span class="line">Move focus to detail                    →</span><br><span class="line"><span class="section">### Article view</span></span><br><span class="line">Move focus to article list timeline        ←</span><br></pre></td></tr></table></figure><h1 id="存储和HPC相关资讯"><a href="#存储和HPC相关资讯" class="headerlink" title="存储和HPC相关资讯"></a>存储和HPC相关资讯</h1><p><a href="https://blocksandfiles.com/">Blocks and Files</a>: 存储相关，涵盖存储介质、从驱动器到阵列的设备再到基于服务器的存储、云存储等  </p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 摸鱼 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo+Github搭建</title>
       <link href="/post/d4de41bd.html"/>
       <url>/post/d4de41bd.html</url>

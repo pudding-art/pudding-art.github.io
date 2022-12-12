@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-12-11T16:01:33.204Z</updated>
+  <updated>2022-12-12T08:41:21.860Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>摸鱼必备（一）</title>
+    <link href="http://example.com/post/99866e21.html"/>
+    <id>http://example.com/post/99866e21.html</id>
+    <published>2022-12-12T01:41:36.000Z</published>
+    <updated>2022-12-12T08:41:21.860Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;简单介绍RSS(Really Simple Syndication，简易信息聚合)，是一种描述和同步网站内容的格式。可以定制个性化信息推送服务，减少海量信息下浏览负担。不同产品不同域名，没有一个集合所有文章的门户。&lt;/p&gt;
+&lt;/blockquote</summary>
+      
+    
+    
+    
+    
+    <category term="摸鱼" scheme="http://example.com/tags/%E6%91%B8%E9%B1%BC/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo+Github搭建</title>
