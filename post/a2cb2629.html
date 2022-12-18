@@ -1,0 +1,272 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Computer_Architecture_A_Quantitive_Approach | Pudding_Art</title><meta name="author" content="Quinn Hong"><meta name="copyright" content="Quinn Hong"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="参考资料:     《Computer Architecture _ a quantitive approach the sixth》 《计算机组成原理 —— 软硬件接口》      高体ppt   相关Blog和资料 第六版将指令集从MIPS切换到了RISC-V，作者认为RISC-V这个现代、模块化、开放的指令集可能在信息技术行业成为一个意义非凡的力量，在计算机架构领域的重要性可能会像Linu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Computer_Architecture_A_Quantitive_Approach">
+<meta property="og:url" content="http://example.com/post/a2cb2629.html">
+<meta property="og:site_name" content="Pudding_Art">
+<meta property="og:description" content="参考资料:     《Computer Architecture _ a quantitive approach the sixth》 《计算机组成原理 —— 软硬件接口》      高体ppt   相关Blog和资料 第六版将指令集从MIPS切换到了RISC-V，作者认为RISC-V这个现代、模块化、开放的指令集可能在信息技术行业成为一个意义非凡的力量，在计算机架构领域的重要性可能会像Linu">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/default_cover.jpg">
+<meta property="article:published_time" content="2022-12-14T11:41:50.000Z">
+<meta property="article:modified_time" content="2022-12-15T14:01:19.142Z">
+<meta property="article:author" content="Quinn Hong">
+<meta property="article:tag" content="Computer Architecture">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/default_cover.jpg"><link rel="shortcut icon" href="/img/favicon.JPG"><link rel="canonical" href="http://example.com/post/a2cb2629"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-right"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Computer_Architecture_A_Quantitive_Approach',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-12-15 22:01:19'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/iconfont.css"><link rel="stylesheet" href="/css/mouse_move.css"><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Pudding_Art" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/favicon.JPG" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> Messageboard</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> Log</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly/"><i class="fa-fw fa fa-heart"></i><span> Butterfly theme</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/default_cover.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Pudding_Art</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> Messageboard</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> Log</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly/"><i class="fa-fw fa fa-heart"></i><span> Butterfly theme</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Computer_Architecture_A_Quantitive_Approach</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-12-14T11:41:50.000Z" title="发表于 2022-12-14 19:41:50">2022-12-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-12-15T14:01:19.142Z" title="更新于 2022-12-15 22:01:19">2022-12-15</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Computer_Architecture_A_Quantitive_Approach"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>参考资料:   </p>
+<ul>
+<li>《Computer Architecture _ a quantitive approach the sixth》</li>
+<li>《计算机组成原理 —— 软硬件接口》     </li>
+<li>高体ppt  </li>
+<li>相关Blog和资料</li>
+<li>第六版将指令集从MIPS切换到了RISC-V，作者认为RISC-V这个现代、模块化、开放的指令集可能在信息技术行业成为一个意义非凡的力量，在计算机架构领域的重要性可能会像Linux在操作系统领域一样，同时新增Chapter 7，引入domain-specific架构的介绍，介绍了几个具体的工业例子。</li>
+</ul>
+</blockquote>
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><h2 id="非知识性内容"><a href="#非知识性内容" class="headerlink" title="非知识性内容"></a>非知识性内容</h2><p>能力的提升包括以下几个方面：</p>
+<ul>
+<li>阅读能力：mostly books, papers and articles，总结出主旨并产生自己的观点，自主学习（阅读书籍之前首先要对阅读策略进行研究）</li>
+<li>应用能力：网络、工具、编程、数学等，学习如何设计、分析、验证并修正自己的观点，工程能力的培养</li>
+<li>合作和沟通能力: Formal speaking, listening, meeting and rules,社交和管理能力</li>
+</ul>
+<p>研究生阶段课程和本科的区别：</p>
+<ul>
+<li>How to run? -&gt; How to run faster?</li>
+</ul>
+<p>本科：</p>
+<ul>
+<li>Instruction set architecture ISA</li>
+<li>Basic pipeline &amp; concepts</li>
+</ul>
+<p>研究生：</p>
+<ul>
+<li>Introduction Level Parallelism (ILP) </li>
+<li>Thread-Level Parallelism (TLP)</li>
+<li>Request-Level Parallelism (RLP)</li>
+<li>Data-Level Parallelism (DLP)</li>
+</ul>
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><ol>
+<li>应用的变化<br>数值型科学计算-&gt;商业娱乐；增长的内存需求；单线程-&gt;多线程；单机-&gt;网络；character-oriented-&gt;multimedia:video, audio, graphics</li>
+<li>计算机分类（一般一种事物在诞生之初只有一种，随着同环境的不断交互，逐渐分化，后代替换或弥补前面几代，逐渐形成类别）<br>1960s,mainframe<br>1970s, minicomputer &amp; supercomputer<br>1980s, Microprocessor &amp; Desktop(workstations &amp; PC) &amp; servers<br>1990s, Internet &amp; PDA, games, set-top boxes<br>2000, Cell phone … embedded computer<br>Now: Edge Computer</li>
+<li>计算机技术发展：半导体技术的提升；计算机体系结构的发展，几个节点还是要了解一下<br>1970s:Market; Enabled by HLL compilers:asm,…,C; Vendor-independent OS:UNIX<br>1980s:Lead to RISC architectures: Parallel in a chip:ILP; Cheaper high-performance memory:cache<br>1990s: CISC to RISC like<br>2000s: Lightweight computers</li>
+</ol>
+<h2 id="知识性内容"><a href="#知识性内容" class="headerlink" title="知识性内容"></a>知识性内容</h2><ol>
+<li><p>理解计算机体系结构<br>计算机体系结构实际上是针对底层物理实现的抽象层设计，允许上层应用高效的使用底层基础设施。</p>
+</li>
+<li><p>现代系统的抽象层次结构<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/layers.jpg" alt="抽象层次结构"><br>体系结构限定的范围也在变化，更加细化</p>
+</li>
+<li><p>Computer Architecture:An Integrated Approach<br>根据目标机器确定具体的需求；在已有的限制下(cost, power and availability)最大化机器性能<br>三个角度：ISA, 微体系结构(Origanization), 硬件(Implementation)<br>计算机体系结构不只是transistors, individual instructions or particular implementations</p>
+</li>
+<li><p>技术趋势<br>集成电路技术：晶体管密度：35%&#x2F;year；Die size：10%-20%&#x2F;year；Integration overall:40%-50%&#x2F;year<br>DRAM容量：25%-40%&#x2F;year(slowing 内存墙，内存容量的增长速度远远不能跟上CPU内核增长速度)<br>Flash容量：50-60%&#x2F;year; 15-20x cheaper&#x2F;bit than DRAM<br>磁盘技术：40%&#x2F;year 比Flash便宜15-25x，比DRAM便宜300-500x<br>网络：延迟，带宽，无线 </p>
+</li>
+<li><p>Moore’s Law<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/moore.jpg"></p>
+</li>
+<li><p>Intel研发重心转移<br>2004年开始Intel将重心从研发高性能单处理器转移到多处理器芯片上，不再单独依赖ILP指令级并行，而将更多使用DLP数据级并行，TLP线程级并行。ILP是软件程序不感知的并行，而DLP、TLP、RLP都需要程序显式感知，这也增大了软件编程的难度。</p>
+</li>
+<li><p>Dennard缩放定律<br>随着晶体管尺寸越来越小，功耗密度保持不变，即单位面积的功耗保持不变。</p>
+</li>
+<li><p>Amdahl定律<br>系统中某一部件因为采用更快的实现后，整个系统性能的提高与该部分的使用频率或者在总运行时间中所占比例有关。</p>
+</li>
+</ol>
+<h1 id="Chapter-One"><a href="#Chapter-One" class="headerlink" title="Chapter One"></a>Chapter One</h1><blockquote>
+<p>介绍了一些公式，这些公式用于计算功耗，静态功率，动态功率，集成电路成本，可靠性和可用性等。这些公式被用于随后章节的量化分析设计和性能测量。ISA在Appendix A，因为作者认为它扮演的角色已经不像1990年那么重要了。</p>
+<ul>
+<li>Classes of Computers </li>
+<li>体系结构的定义</li>
+<li>技术趋势</li>
+<li>集成电路中的功率和能耗趋势</li>
+<li>成本趋势</li>
+<li>可靠性</li>
+<li>性能的测量、报告和汇总</li>
+<li>计算机设计的量化原理</li>
+<li>Put it all together: 性能、价格和功耗</li>
+<li>Fallacies and Pitfalls</li>
+</ul>
+</blockquote>
+<h2 id="计算机的分类"><a href="#计算机的分类" class="headerlink" title="计算机的分类"></a>计算机的分类</h2><ol>
+<li>PMD<br>限制较多：成本、能效；应用程序的响应性能和可预测性（实时性能）；存储器占用降至最小（存储器可能在系统成本中占有很大比例，存储器优化很重要，由于应用程序已经决定了数据规模，所以重视存储器容量其实就是要重视代码规模）；电池容量以及散热</li>
+<li>PC</li>
+<li>Server<br>可用性；可扩展性；高吞吐（尽管对单个请求的相应速度很重要，但是总体效率和成本效益——由单位时间内能够处理的请求数决定）才是大多数服务器的关键度量）</li>
+<li>集群&#x2F;仓库级计算机<br>集群：一组计算机通过局域网连接在一起，每个节点运行自己的操作系统，节点之间使用网络协议进行通信。最大规模的集群称为WSC仓库级计算机。<br>WSC与服务器的区别：廉价组建构建，依靠软件层捕获和隔离在这一级别计算时发生的问题<br>WSC与超算的区别：超算强调浮点性能，处理通信密集的批程序，需要高速内部网络；WSC重视互动应用程序、大规模存储、可靠性和较高Internet带宽<br>WSC可扩展性和服务器可扩展性区别：WSC可扩展性通过连接计算机的局域网实现；服务器通过集成计算机硬件实现</li>
+<li>嵌入式计算机（6th无）<br>达到最低标准的性能需要（能否运行第三方软件作为区分嵌入式和非嵌入式的分界线）；嵌入式计算领域数据不够充足</li>
+</ol>
+<h3 id="并行度和并行体系结构分类"><a href="#并行度和并行体系结构分类" class="headerlink" title="并行度和并行体系结构分类"></a>并行度和并行体系结构分类</h3><ol>
+<li>应用程序中主要有以下两种并行<br>数据级并行DLP<br>任务级并行TLP</li>
+<li>计算机硬件以如下4种方式开发以上两种应用并行    <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">a 指令级并行 instruction-level</span><br><span class="line">  在编译器的帮助下使用流水线等思想适度开发DLP，利用推理执行speculative execution的思想以中等水平开发数据级并行</span><br><span class="line">b 向量体系结构和图形处理器GPU vector architecture, graphic processor units</span><br><span class="line">  单条指令并行应用于一个数据集以开发DLP</span><br><span class="line">c 线程级并行 thread-level</span><br><span class="line">  在紧耦合硬件模型中开发DLP或TLP，这种模型允许在并行线程之间交互</span><br><span class="line">d 请求级并行 request-level</span><br><span class="line">  在程序员或os指定的大量去耦合任务之间开发并行</span><br></pre></td></tr></table></figure></li>
+<li>Michael Flynn分类<br>SISD；SIMD；MISD；MIMD<br>SIMD每个处理器有自己的数据存储器，但是<mark>只有一个指令存储器和控制处理器</mark></li>
+</ol>
+<h2 id="Defining-Computer-Architecture"><a href="#Defining-Computer-Architecture" class="headerlink" title="Defining Computer Architecture"></a>Defining Computer Architecture</h2><blockquote>
+<p>考虑对于要完成的任务来说，哪些属性是最重要的。任务包括：指令集设计、功能组织、逻辑设计、实现方式；实现方式可能包括：集成电路设计、包装、电池和冷却。  </p>
+</blockquote>
+<h3 id="ISA-分类"><a href="#ISA-分类" class="headerlink" title="ISA 分类"></a>ISA 分类</h3><ol>
+<li>register-memory ISAs, eg:80x86</li>
+<li><font color=#f0808> load-store ISAs</font>, eg:ARMv8, RISC-V (access memory only with load or store instructions, All ISAs announced since 1985 are load-store)</li>
+</ol>
+<h3 id="Memory-addressing-存储器寻址"><a href="#Memory-addressing-存储器寻址" class="headerlink" title="Memory addressing 存储器寻址"></a>Memory addressing 存储器寻址</h3><p>Almost all 使用<mark>byte addressing</mark> 访问存储器操作数。有些体系结构要求操作数对齐（ARMv7），x86不需要，但是如果操作数对齐，访问的速度会更快。一个对象的字节地址Address mod size &#x3D; 0,则对该地址的访问是对齐的。</p>
+<h3 id="Addressing-modes-寻址模式"><a href="#Addressing-modes-寻址模式" class="headerlink" title="Addressing modes 寻址模式"></a>Addressing modes 寻址模式</h3><p>register + constant operands + memory object<br>RISC-V: Register,Immediate(for constants),Displacement位移量<br>x86: Register,Immediate(for constants),Displacement位移量 + no register(absolute), two registers(based indexed with displacement), two registers where one register is multiplied by the size of the operand in bytes (based with scaled index and displacement).寄存器间接寻址+基址寻址+变址寻址+PC相对寻址+自动递增&#x2F;递减寻址</p>
+<h3 id="Types-and-sizes-of-operands-操作数类型和大小"><a href="#Types-and-sizes-of-operands-操作数类型和大小" class="headerlink" title="Types and sizes of operands 操作数类型和大小"></a>Types and sizes of operands 操作数类型和大小</h3><h3 id="操作指令"><a href="#操作指令" class="headerlink" title="操作指令"></a>操作指令</h3><p>数据传输；算术逻辑；控制指令；浮点指令</p>
+<h3 id="控制流指令"><a href="#控制流指令" class="headerlink" title="控制流指令"></a>控制流指令</h3><p>conditional branches 条件转移；<br>unconditional jumps 无条件跳转；<br>procedure calls and returns 过程调用和返回；<br>以上三种都使用相对PC的寻址方式，其中的分支地址由一个地址字段指定，该地址被加到PC。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># branches</span></span><br><span class="line"><span class="comment"># RISC-V </span></span><br><span class="line"><span class="built_in">test</span> contents of registers</span><br><span class="line"><span class="comment"># x86 &amp; ARMv8</span></span><br><span class="line"><span class="built_in">test</span> condition code bits <span class="comment"># 执行算术/逻辑运算时置位</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># procedure calls and returns</span></span><br><span class="line"><span class="comment"># ARMv8 &amp; RSIC-V</span></span><br><span class="line"><span class="built_in">return</span> register</span><br><span class="line"><span class="comment"># x86</span></span><br><span class="line"><span class="built_in">return</span> stack <span class="keyword">in</span> memory</span><br></pre></td></tr></table></figure>
+<h3 id="ISA编码"><a href="#ISA编码" class="headerlink" title="ISA编码"></a>ISA编码</h3><p>fixed length<br>variable length<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/../img/RISC_V.jpg"></p>
+<h3 id="真实的体系结构"><a href="#真实的体系结构" class="headerlink" title="真实的体系结构"></a>真实的体系结构</h3><p>计算机的实现包括两个方面：组成和硬件。<br>组成&#x3D;微体系结构；比如存储器系统、存储器互联、设计内部处理器或CPU等<br>单个微处理器上开始采用多个处理器，故用核心来称呼处理器<br>硬件是一个计算机的具体实现，包括计算机的详尽逻辑设计和封装技术；同一系列的计算机通常具有相同的指令集体系结构和几乎相同的组成，但是在具体的硬件实现方面有所不同。<br>本书的计算机体系结构包括ISA、组成、硬件。</p>
+<blockquote>
+<p>架构师需要考虑的内容<br>架构师设计的计算机必须满足功能需求，并达到价格、功耗、性能和可用性指标。通常架构师还必须判断有什么样的功能要求，其中哪一项可能是主要任务。需求可能是市场驱动的特定功能。应用软件决定了计算机的使用方式，从而经常会推动特定功能需求的选择。如果存在大量为一特定指令集体系结构设计的软件了，架构师可能会决定：新计算机应当实现这种已有的指令集。如果某类应用程序拥有庞大的市场，那可能会鼓励设计人员整合一些需求，使计算机在这一市场上具有更强的竞争力。【抓住重点+灵活应变+整合需求提高弹性】<br>架构师还必须了解技术和计算机应用这两方面的重要趋势，因为这些趋势不仅会影响未来的成本，还会影响到体系结构的寿命。</p>
+</blockquote>
+<h2 id="技术趋势"><a href="#技术趋势" class="headerlink" title="技术趋势"></a>技术趋势</h2><ol>
+<li>集成电路逻辑技术</li>
+<li>半导体DRAM</li>
+<li>半导体Flash</li>
+<li>磁盘技术</li>
+<li>网络技术：取决于交换机性能和传输系统的性能<br>设计人员必须为应对关键技术的变化做好准备。设计人员在设计时经常要考虑到下一代技术，因为当一代产品开始大量交付时，下一代技术可能是最具成本效益的，或者可能拥有性能优势。尽管技术进步是连续性的，但是只有当技术积累到一定程度，为新功能的出现做好准备时，才会产生跳跃性的、不连续的影响。20世纪80年代后期，一级缓存可以出现在一个芯片上。通过消除处理器内部以及处理器与缓存之间的芯片交叉，使成本效率和能耗效率大幅提高成为可能。在技术发展到一定程度之前，这种设计无法实现。设计决策也受到技术门槛的影响。</li>
+</ol>
+<h3 id="Performance-Trends-Bandwidth-over-Latency"><a href="#Performance-Trends-Bandwidth-over-Latency" class="headerlink" title="Performance Trends: Bandwidth over Latency"></a>Performance Trends: Bandwidth over Latency</h3><p>性能是区分微处理器和网络的主要指标，所以容量提高的最多</p>
+<h2 id="Storage"><a href="#Storage" class="headerlink" title="Storage"></a>Storage</h2><h3 id="Memory"><a href="#Memory" class="headerlink" title="Memory"></a>Memory</h3><blockquote>
+<p>一种存储二进制数据的容器；object size(cells&#x2F;bits_8bits) + memory size + address &#x3D; specify a memory </p>
+</blockquote>
+<ol>
+<li>Accessing Mode: Bytes(8 bits);Half word(16bits);Words(32bits);Double words(64bits)</li>
+<li>大端寻址和小端寻址: 按Byte分</li>
+<li>字节对齐Byte aligned</li>
+</ol>
+<h3 id="Registers"><a href="#Registers" class="headerlink" title="Registers"></a>Registers</h3><blockquote>
+<p>CPU内部的一种存储形式；3种类型register file: acc, stack, register </p>
+</blockquote>
+<h2 id="Operands"><a href="#Operands" class="headerlink" title="Operands"></a>Operands</h2><h2 id="Operations"><a href="#Operations" class="headerlink" title="Operations"></a>Operations</h2></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Quinn Hong</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/post/a2cb2629.html">http://example.com/post/a2cb2629.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Pudding_Art</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Computer-Architecture/">Computer Architecture</a></div><div class="post_share"><div class="social-share" data-image="/img/default_cover.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/post/9bf18517.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/default_cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">DEBUG</div></div></a></div><div class="next-post pull-right"><a href="/post/95a38ed7.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/default_cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">IC验证实习入坑准备</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/favicon.JPG" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Quinn Hong</div><div class="author-info__description">When you are dead, you do not know you are dead. All of the pain is felt by others. The same thing happens when you are stupid.</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/pudding-art"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/pudding-art" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:pudding.art60@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS链接"><i class="fa fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">2000年至今一事无成。。。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Introduction"><span class="toc-number">1.</span> <span class="toc-text">Introduction</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%9E%E7%9F%A5%E8%AF%86%E6%80%A7%E5%86%85%E5%AE%B9"><span class="toc-number">1.1.</span> <span class="toc-text">非知识性内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Background"><span class="toc-number">1.2.</span> <span class="toc-text">Background</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E6%80%A7%E5%86%85%E5%AE%B9"><span class="toc-number">1.3.</span> <span class="toc-text">知识性内容</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Chapter-One"><span class="toc-number">2.</span> <span class="toc-text">Chapter One</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">2.1.</span> <span class="toc-text">计算机的分类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B6%E8%A1%8C%E5%BA%A6%E5%92%8C%E5%B9%B6%E8%A1%8C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E5%88%86%E7%B1%BB"><span class="toc-number">2.1.1.</span> <span class="toc-text">并行度和并行体系结构分类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Defining-Computer-Architecture"><span class="toc-number">2.2.</span> <span class="toc-text">Defining Computer Architecture</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ISA-%E5%88%86%E7%B1%BB"><span class="toc-number">2.2.1.</span> <span class="toc-text">ISA 分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Memory-addressing-%E5%AD%98%E5%82%A8%E5%99%A8%E5%AF%BB%E5%9D%80"><span class="toc-number">2.2.2.</span> <span class="toc-text">Memory addressing 存储器寻址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Addressing-modes-%E5%AF%BB%E5%9D%80%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.2.3.</span> <span class="toc-text">Addressing modes 寻址模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Types-and-sizes-of-operands-%E6%93%8D%E4%BD%9C%E6%95%B0%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%A4%A7%E5%B0%8F"><span class="toc-number">2.2.4.</span> <span class="toc-text">Types and sizes of operands 操作数类型和大小</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A4"><span class="toc-number">2.2.5.</span> <span class="toc-text">操作指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E6%B5%81%E6%8C%87%E4%BB%A4"><span class="toc-number">2.2.6.</span> <span class="toc-text">控制流指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ISA%E7%BC%96%E7%A0%81"><span class="toc-number">2.2.7.</span> <span class="toc-text">ISA编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9C%9F%E5%AE%9E%E7%9A%84%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.8.</span> <span class="toc-text">真实的体系结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E8%B6%8B%E5%8A%BF"><span class="toc-number">2.3.</span> <span class="toc-text">技术趋势</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Performance-Trends-Bandwidth-over-Latency"><span class="toc-number">2.3.1.</span> <span class="toc-text">Performance Trends: Bandwidth over Latency</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Storage"><span class="toc-number">2.4.</span> <span class="toc-text">Storage</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Memory"><span class="toc-number">2.4.1.</span> <span class="toc-text">Memory</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Registers"><span class="toc-number">2.4.2.</span> <span class="toc-text">Registers</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Operands"><span class="toc-number">2.5.</span> <span class="toc-text">Operands</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Operations"><span class="toc-number">2.6.</span> <span class="toc-text">Operations</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/post/9bf18517.html" title="DEBUG"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/default_cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DEBUG"/></a><div class="content"><a class="title" href="/post/9bf18517.html" title="DEBUG">DEBUG</a><time datetime="2022-12-15T02:30:41.000Z" title="发表于 2022-12-15 10:30:41">2022-12-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/a2cb2629.html" title="Computer_Architecture_A_Quantitive_Approach"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/default_cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Computer_Architecture_A_Quantitive_Approach"/></a><div class="content"><a class="title" href="/post/a2cb2629.html" title="Computer_Architecture_A_Quantitive_Approach">Computer_Architecture_A_Quantitive_Approach</a><time datetime="2022-12-14T11:41:50.000Z" title="发表于 2022-12-14 19:41:50">2022-12-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/95a38ed7.html" title="IC验证实习入坑准备"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/default_cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IC验证实习入坑准备"/></a><div class="content"><a class="title" href="/post/95a38ed7.html" title="IC验证实习入坑准备">IC验证实习入坑准备</a><time datetime="2022-12-13T14:30:28.000Z" title="发表于 2022-12-13 22:30:28">2022-12-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/99866e21.html" title="摸鱼必备（一）"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/default_cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="摸鱼必备（一）"/></a><div class="content"><a class="title" href="/post/99866e21.html" title="摸鱼必备（一）">摸鱼必备（一）</a><time datetime="2022-12-12T01:41:36.000Z" title="发表于 2022-12-12 09:41:36">2022-12-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/d4de41bd.html" title="Hexo+Github搭建"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/default_cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo+Github搭建"/></a><div class="content"><a class="title" href="/post/d4de41bd.html" title="Hexo+Github搭建">Hexo+Github搭建</a><time datetime="2022-12-11T11:19:02.000Z" title="发表于 2022-12-11 19:19:02">2022-12-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 By Quinn Hong</div><div class="footer_custom_text">看不懂现在，看不清未来，是因为没有看到过去</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script type="text/javascript" src="/js/fairyDustCursor.js"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

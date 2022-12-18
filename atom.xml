@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-12-12T08:41:21.860Z</updated>
+  <updated>2022-12-15T14:01:20.876Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,69 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>DEBUG</title>
+    <link href="http://example.com/post/9bf18517.html"/>
+    <id>http://example.com/post/9bf18517.html</id>
+    <published>2022-12-15T02:30:41.000Z</published>
+    <updated>2022-12-15T14:01:20.876Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Mac下-bash-profile和-zshrc区别&quot;&gt;&lt;a href=&quot;#Mac下-bash-profile和-zshrc区别&quot; class=&quot;headerlink&quot; title=&quot;Mac下.bash_profile和.zshrc区别&quot;&gt;&lt;/a&gt;Mac下.bas</summary>
+      
+    
+    
+    
+    
+    <category term="DEBUG" scheme="http://example.com/tags/DEBUG/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Computer_Architecture_A_Quantitive_Approach</title>
+    <link href="http://example.com/post/a2cb2629.html"/>
+    <id>http://example.com/post/a2cb2629.html</id>
+    <published>2022-12-14T11:41:50.000Z</published>
+    <updated>2022-12-15T14:01:19.142Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;参考资料:   &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;《Computer Architecture _ a quantitive approach the sixth》&lt;/li&gt;
+&lt;li&gt;《计算机组成原理 —— 软硬件接口》     &lt;/li&gt;
+&lt;li&gt;高体</summary>
+      
+    
+    
+    
+    
+    <category term="Computer Architecture" scheme="http://example.com/tags/Computer-Architecture/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IC验证实习入坑准备</title>
+    <link href="http://example.com/post/95a38ed7.html"/>
+    <id>http://example.com/post/95a38ed7.html</id>
+    <published>2022-12-13T14:30:28.000Z</published>
+    <updated>2022-12-13T14:30:28.141Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>摸鱼必备（一）</title>
     <link href="http://example.com/post/99866e21.html"/>
     <id>http://example.com/post/99866e21.html</id>
     <published>2022-12-12T01:41:36.000Z</published>
-    <updated>2022-12-12T08:41:21.860Z</updated>
+    <updated>2022-12-12T08:47:08.802Z</updated>
     
     
       
